@@ -17,7 +17,7 @@ An [Ansible](http://www.ansible.com) role for [macports](http://www.macports.org
 
 ## Requirements
 
-- ansible >= 1.7.2
+- ansible >= 1.9
 
 
 ## Role Variables

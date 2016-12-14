@@ -8,10 +8,11 @@ galaxy_info:
   description: Role for macports on MacOSX.
   company: ansiblebit.org
   license: BSD
-  min_ansible_version: 1.7.2
+  min_ansible_version: 1.9
   platforms:
     - name: MacOSX
       versions:
+        - 10.12.1
         - 10.11.1
         - 10.10.5
         - 10.10.4

@@ -8,7 +8,7 @@
     group=staff
     mode=0755
     state=directory
-  sudo: yes
+  become: yes
 
 - name: darwin | source | check if tarball exists
   stat:
@@ -23,6 +23,6 @@
     owner=root
     group=wheel
     mode=0644
-  sudo: yes
+  become: yes
   when: not f.stat.exists
 
