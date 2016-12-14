@@ -30,7 +30,7 @@
   when: not port.stat.exists or macports_force_install
 
 - name: darwin | macosx | update ports tree and rebuild installation if needed
-  command: port -v selfupdate
+  command: /opt/local/bin/port -v selfupdate
   when: macports_selfupdate
   sudo: yes
 
@@ -41,7 +41,7 @@
   sudo: yes
 
 - name: darwin | macosx | upgrade outdated ports
-  command: port -v upgrade outdated
+  command: /opt/local/bin/port -v upgrade outdated
   register: port_upgrade_outdated
   changed_when: port_upgrade_outdated.rc != 0 and not 'Nothing to upgrade.' in port_upgrade_outdated.stdout
   failed_when: port_upgrade_outdated.rc != 0 and 'Error' in port_upgrade_outdated.stdout
